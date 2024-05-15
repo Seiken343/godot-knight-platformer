@@ -8,15 +8,22 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite = $AnimatedSprite2D
 
+var jump_max = 2
+var jump_count = 0
 
 func _physics_process(delta): #physics process always happens at fixed intervals where _process happens at variable intervals based on 'lag' or other things affect FPS
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+	if is_on_floor() and jump_count!=0:
+		jump_count = 0
+
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	#if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and jump_count < jump_max:
 		velocity.y = JUMP_VELOCITY
+		jump_count += 1
 
 
 

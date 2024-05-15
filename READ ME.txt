@@ -1,0 +1,17 @@
+Things I can add to game:
+[x] double jump
+[ ] expand the level
+[ ] add sounds when injured
+[ ] add health count and enemies deal damage instead of kill
+[ ] add traps that can turn on or off
+[ ] add a main menu
+[ ] add power ups (like make double jump a power up you collect)
+[ ] turn game manager into auto-load like the audio track, so it can be used to change scenes (different levels)
+[ ] coyote time (a brief period of time after running off a platform where the game will still register the player pressing the jump button. This means that players don’t have to be absolutely perfect to complete a jump – there’s a small amount of wiggle room.)
+[ ] 
+[ ] 
+[ ] 
+
+
+
+https://blogs.bsu.edu/teaching-innovation/2023/11/15/coyote-time-games-teach-forgiveness-learning/#:~:text=Named%20after%20the%20Wile%20E,small%20amount%20of%20wiggle%20room.
