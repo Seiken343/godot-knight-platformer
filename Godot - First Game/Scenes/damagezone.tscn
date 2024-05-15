@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvaxmacirmgfc"]
+
+[ext_resource type="Script" path="res://Scripts/damagezone.gd" id="1_uegyw"]
+[ext_resource type="AudioStream" uid="uid://dysybsr5d1511" path="res://Assets/sounds/hurt.wav" id="2_gqbm0"]
+
+[node name="Damagezone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_uegyw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_gqbm0")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

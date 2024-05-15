@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+signal healthChanged
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -10,6 +12,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var jump_max = 2
 var jump_count = 0
+
+@export var maxHealth = 3
+@onready var currentHealth: int = maxHealth
 
 func _physics_process(delta): #physics process always happens at fixed intervals where _process happens at variable intervals based on 'lag' or other things affect FPS
 	# Add the gravity.

@@ -1,8 +1,8 @@
 Things I can add to game:
 [x] double jump
 [ ] expand the level
-[ ] add sounds when injured
-[ ] add health count and enemies deal damage instead of kill
+[x] add sounds when injured
+[x] add health count and enemies deal damage instead of kill
 [ ] add traps that can turn on or off
 [ ] add a main menu
 [ ] add power ups (like make double jump a power up you collect)
